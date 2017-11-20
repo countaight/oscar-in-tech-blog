@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto:900|Source+Sans+Pro:300');
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite alternate 0.5s linear;
+  height: 100px;
+}
+
+.App-header {
+  font-family: 'PT Mono', sans-serif;
+  background-color: #3d3f43;
+  height: 150px;
+  padding: 20px;
+  color: white;
+  transition: height 500ms;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+
+.blog-list-post {
+  width: 80%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.blog-post-link {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  text-decoration: none;
+  color: #444;
+}
+
+.blog-post-description {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.blog-post-summary {
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 0;
+  text-align: left;
+}
+
+.fb-icon {
+  width: 50px;
+  height: 50px;
+}
+
+h3 {
+  color: #354399;
+}
+
+@media only screen and (max-width: 480px) {
+  .App {
+    text-align: left;
+  }
+
+  .App-header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    transition: height 500ms;
+  }
+}
