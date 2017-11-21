@@ -16,6 +16,7 @@ class App extends Component {
         <div>
           {this.props.children}
         </div>
+        <footer className="App-footer">Powered by <a href='https://buttercms.com/'>ButterCMS</a></footer>
       </div>
     );
   }

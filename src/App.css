@@ -5,7 +5,6 @@
 }
 
 .App-logo {
-  animation: App-logo-spin infinite alternate 0.5s linear;
   height: 100px;
 }
 
@@ -26,6 +25,9 @@
   font-size: large;
 }
 
+.App-footer {
+  font-size: 12px;
+}
 
 .blog-list-post {
   width: 80%;
@@ -73,5 +75,10 @@ h3 {
     align-items: center;
     height: 50px;
     transition: height 500ms;
+  }
+
+  .App-logo {
+    height: 50px;
+    margin-right: 10px;
   }
 }
