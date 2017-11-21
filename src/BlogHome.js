@@ -5,10 +5,7 @@ import Butter from 'buttercms';
 import logo from './logo.svg';
 import fbbutton from './facebook.svg';
 
-console.log(process.env.REPOSITORY_URL);
-
-const butter = Butter(process.env.BUTTER_API_KEY);
-
+const butter = Butter(process.env.REACT_APP_BUTTER);
 
 class BlogHome extends Component {
 	state = {
