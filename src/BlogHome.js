@@ -7,6 +7,8 @@ import fbbutton from './facebook.svg';
 
 const butter = Butter(process.env.BUTTER_API_KEY);
 
+console.log(process.env);
+
 class BlogHome extends Component {
 	state = {
 		loaded: false,
