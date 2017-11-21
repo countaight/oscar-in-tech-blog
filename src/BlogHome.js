@@ -5,7 +5,7 @@ import Butter from 'buttercms';
 import logo from './logo.svg';
 import fbbutton from './facebook.svg';
 
-console.log(process.env);
+console.log(process);
 
 const butter = Butter(process.env.BUTTER_API_KEY);
 
