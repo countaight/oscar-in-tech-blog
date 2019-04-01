@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=PT+Mono|Roboto:900|Source+Sans+Pro:300');
+@import url("https://fonts.googleapis.com/css?family=PT+Mono|Roboto:900|Source+Sans+Pro:300");
 
 .App {
   text-align: center;
@@ -9,16 +9,30 @@
 }
 
 .App-header {
-  font-family: 'PT Mono', sans-serif;
   background-color: #3d3f43;
-  height: 150px;
-  padding: 20px;
   color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  top: 0;
   transition: height 500ms;
+  width: 100vw;
+}
+
+.custom-select {
+  display: inline-block;
+}
+
+.custom-selections {
+  display: flex;
+  flex-direction: column;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 10em;
 }
 
 .App-intro {
@@ -27,6 +41,10 @@
 
 .App-footer {
   font-size: 12px;
+}
+
+.main-content {
+  height: 100vh;
 }
 
 .blog-list-post {
@@ -38,7 +56,7 @@
 }
 
 .blog-post-link {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: left;
   text-decoration: none;
   color: #444;
@@ -51,7 +69,7 @@
 }
 
 .blog-post-summary {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   margin: 0;
   text-align: left;
 }
