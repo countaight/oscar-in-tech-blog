@@ -8,6 +8,8 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-loading": "^0.1.4",
+    "react-pose": "^4.0.8",
+    "react-pose-text": "^3.1.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "^2.1.8",
