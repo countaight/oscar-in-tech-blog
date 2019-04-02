@@ -47,6 +47,10 @@
   color: #0de87bff;
 }
 
+.noun {
+  z-index: 10;
+}
+
 .App-title {
   font-size: 5em;
 }

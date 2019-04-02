@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import posed from 'react-pose';
 
+import Puppy from './photographs-puppies.jpg';
+
 const CustomSelect = posed.span({
 	open: {
 		height: 316,
@@ -37,7 +39,7 @@ class AnimatedHeader extends Component {
 			selectable: false,
 			position: 0,
 			designs: ['sites', 'graphics', 'flyers'],
-			photographs: ['people', 'puppies', 'nature'],
+			photographs: ['people', 'puppies', 'places'],
 			makes: ['origami', 'funnyfaces', 'friends'],
 		},
 	};
@@ -84,6 +86,8 @@ class AnimatedHeader extends Component {
 	handleClick = (e) => {
 		clearInterval(this.timer);
 		this.timer = null;
+
+		console.log(e.target);
 		const { nouns, verbs } = this.state;
 
 		if (e.target.classList[1] === 'verb') {
@@ -110,10 +114,11 @@ class AnimatedHeader extends Component {
 	render() {
 		const { verbs, nouns } = this.state;
 		return <div className='animated-header'>
+			<div className="image-div" style={{ width: '100vw', height: '100vh', position: 'fixed', top: 0, background: `linear-gradient(transparent, #3d3f43), url(${Puppy}) no-repeat center`, zIndex: -2 }}></div>
 			<span className="ox" onClick={this.handleAnim}>ox</span>
 			<span className='custom-select'>
 				<CustomSelect className='custom-selections' onClick={this.handleClick} pose={verbs.selectable ? 'open' : 'closed'}>
-					{verbs.options.map((verb, i) => <CustomOption i={i} className="custom-selection verb" key={verb} pose={this.determineVisibility({ verb }) ? 'open' : 'closed'} withParent={false}>{verb}</CustomOption>)}
+					{verbs.options.map(verb => <CustomOption className="custom-selection verb" key={verb} pose={this.determineVisibility({ verb }) ? 'open' : 'closed'} withParent={false}>{verb}</CustomOption>)}
 				</CustomSelect>
 			</span>
 			<span className='custom-select'>
