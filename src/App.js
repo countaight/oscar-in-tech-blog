@@ -10,10 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <Link to="/">
-            <img className="App-logo" src={logo} alt="logo"/>
-          </Link>
-          <h1 className="App-title"><AnimatedHeader/></h1>
+          <AnimatedHeader/>
         </header>
         <div className="main-content">
           {this.props.children}
