@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import posed from 'react-pose';
-
-import Puppy from './photographs-puppies.jpg';
+import posed, { PoseGroup } from 'react-pose';
 
 const CustomSelect = posed.span({
 	open: {
@@ -30,6 +28,11 @@ const CustomOption = posed.span({
 			width: { duration: 1000 }
 		}
 	},
+});
+
+const GalleryImage = posed.img({
+	enter: { opacity: 1, y: 0, transition: { duration: 1500 } },
+	exit: { opacity: 0, y: 1820, transition: { duration: 100 } }
 })
 
 class AnimatedHeader extends Component {
@@ -87,7 +90,6 @@ class AnimatedHeader extends Component {
 		clearInterval(this.timer);
 		this.timer = null;
 
-		console.log(e.target);
 		const { nouns, verbs } = this.state;
 
 		if (e.target.classList[1] === 'verb') {
@@ -113,8 +115,15 @@ class AnimatedHeader extends Component {
 
 	render() {
 		const { verbs, nouns } = this.state;
+		const currentVerb = verbs.options[verbs.position];
+		const currentNoun = nouns[currentVerb][nouns.position];
+
 		return <div className='animated-header'>
-			<div className="image-div" style={{ width: '100vw', height: '100vh', position: 'fixed', top: 0, background: `linear-gradient(transparent, #3d3f43), url(${Puppy}) no-repeat center`, zIndex: -2 }}></div>
+			<div className="image-div">
+			</div>
+			<PoseGroup>
+				<GalleryImage key={`${currentVerb}-${currentNoun}`} alt={`${currentVerb}-${currentNoun}`} src={`${process.env.PUBLIC_URL}/${currentVerb}-${currentNoun}.jpg`} style={imageStyle} />
+			</PoseGroup>
 			<span className="ox" onClick={this.handleAnim}>ox</span>
 			<span className='custom-select'>
 				<CustomSelect className='custom-selections' onClick={this.handleClick} pose={verbs.selectable ? 'open' : 'closed'}>
@@ -128,6 +137,15 @@ class AnimatedHeader extends Component {
 			</span>
 		</div>
 	}
+};
+
+const imageStyle = {
+	width: '100vw',
+	height: '100vh',
+	position: 'fixed',
+	top: 0,
+	zIndex: -2,
+	objectFit: 'cover',
 };
 
 export default AnimatedHeader;
