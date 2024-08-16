@@ -3,16 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "buttercms": "^1.1.4",
+    "buttercms": "^2.1.1",
     "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "react-loading": "^0.1.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-loading": "2.0.3",
     "react-pose": "^4.0.8",
     "react-pose-text": "^3.1.0",
-    "react-router": "^4.2.0",
-    "react-router-dom": "^4.2.2",
-    "react-scripts": "^2.1.8",
+    "react-router": "^6.26.1",
+    "react-router-dom": "^6.26.1",
+    "react-scripts": "^5.0.1",
     "yarn": "^1.15.2"
   },
   "scripts": {
